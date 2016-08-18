@@ -26,6 +26,8 @@ class BootstrapMultiSelect extends InputWidget
      */
     public $clientOptions = [];
 
+    public $ajax = [];
+
     /**
      * Initializes the widget.
      */
@@ -45,7 +47,7 @@ class BootstrapMultiSelect extends InputWidget
         if ($this->hasModel()) {
             echo Html::activeDropDownList($this->model, $this->attribute, $this->data, $this->options);
         } else {
-            echo Html::dropDownList($this->name, $this->value, $this->data, $this->options);
+            echo Html::dropDownList($this->name, $this->value, ($this->ajax) ? $this->data : null, $this->options);
         }
         $this->registerPlugin();
     }
@@ -56,12 +58,20 @@ class BootstrapMultiSelect extends InputWidget
     protected function registerPlugin()
     {
         $view = $this->getView();
-        BootstrapMultiSelectAsset::register($view);
+        Yii2BootstrapMultiSelectAsset::register($view);
         $id = $this->options['id'];
         $options = $this->clientOptions !== false && !empty($this->clientOptions)
             ? Json::encode($this->clientOptions)
             : '';
         $js = "jQuery('#$id').multiselect($options);";
+
         $view->registerJs($js);
+        if ($this->ajax && $this->ajax['url']) {
+            $js = <<<EOD
+               fillAjax("$id","{$this->ajax['url']}")
+EOD;
+            $view->registerJs($js);
+
+        }
     }
 }
