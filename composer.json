@@ -17,6 +17,7 @@
       "homepage": "https://esaesa.github.io/yii2-bootstrap-multiselect/"
     }
   ],
+  "prefer-stable": true,
   "require": {
     "yiisoft/yii2": "*",
     "bower-asset/bootstrap-multiselect": "0.9.*"
