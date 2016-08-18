@@ -1,0 +1,38 @@
+{
+  "name": "esaesa/yii2-bootstrap-multiselect",
+  "description": "Bootstrap Multi Select for Yii2",
+  "keywords": [
+    "yii",
+    "extension",
+    "widget",
+    "multiselect",
+    "bootstrap"
+  ],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Eslam Sameh",
+      "email": "esa_esa_2000@yahoo.com",
+      "homepage": "https://esaesa.github.io/yii2-bootstrap-multiselect/"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "bower-asset/bootstrap-multiselect": "0.9.*",
+    "bower-asset/multiselect": "0.9.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "esa\\multiselect\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    },
+    "asset-installer-paths": {
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
