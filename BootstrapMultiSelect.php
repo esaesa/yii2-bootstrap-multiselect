@@ -45,9 +45,9 @@ class BootstrapMultiSelect extends InputWidget
     public function run()
     {
         if ($this->hasModel()) {
-            echo Html::activeDropDownList($this->model, $this->attribute, $this->data, $this->options);
+            echo Html::activeListBox($this->model, $this->attribute, $this->data, $this->options);
         } else {
-            echo Html::dropDownList($this->name, $this->value, ($this->ajax) ? $this->data : null, $this->options);
+            echo Html::listBox($this->name, $this->value, ($this->ajax) ? $this->data : null, $this->options);
         }
         $this->registerPlugin();
     }
