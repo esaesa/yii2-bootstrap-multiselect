@@ -56,7 +56,7 @@ class BootstrapMultiSelect extends InputWidget
     protected function registerPlugin()
     {
         $view = $this->getView();
-        Boo::register($view);
+        BootstrapMultiSelectAsset::register($view);
         $id = $this->options['id'];
         $options = $this->clientOptions !== false && !empty($this->clientOptions)
             ? Json::encode($this->clientOptions)
