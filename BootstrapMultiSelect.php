@@ -5,9 +5,9 @@
  * Date: 8/18/2016
  * Time: 9:39 AM
  */
-namespace esaesa\multiselect;
+namespace esa\multiselect;
 
-use esa\multiselect\BootstrapMultiSelectAsset;
+
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
@@ -56,7 +56,7 @@ class BootstrapMultiSelect extends InputWidget
     protected function registerPlugin()
     {
         $view = $this->getView();
-        BootstrapMultiSelectAsset::register($view);
+        Boo::register($view);
         $id = $this->options['id'];
         $options = $this->clientOptions !== false && !empty($this->clientOptions)
             ? Json::encode($this->clientOptions)

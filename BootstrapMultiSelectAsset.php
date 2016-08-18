@@ -9,7 +9,7 @@ namespace esa\multiselect;
 
 use yii\web\AssetBundle;
 
-class MultiSelectAsset extends AssetBundle
+class BootstrapMultiSelectAsset extends AssetBundle
 {
     public $sourcePath = '@bower/bootstrap-multiselect/dist';
     public $js = [
