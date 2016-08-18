@@ -19,8 +19,7 @@
   ],
   "require": {
     "yiisoft/yii2": "*",
-    "bower-asset/bootstrap-multiselect": "0.9.*",
-    "bower-asset/multiselect": "0.9.*"
+    "bower-asset/bootstrap-multiselect": "0.9.*"
   },
   "autoload": {
     "psr-4": {
